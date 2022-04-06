@@ -5,8 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Program_C"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Height="350" Width="600"
+        WindowStyle="None"
+        MinHeight="350" MinWidth="600">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="4" Background="#3a4047"
+                    Orientation="Horizontal" FlowDirection="RightToLeft"
+                    MouseDown="WindowsDragMove">
+            <Button Width="20" Height="20" Margin="5" Background="#c15356" 
+                    Content="×" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                    Click="CloseButton_Click"/>
+
+            <Button Width="20" Height="20" Margin="5" Background="#c09553"
+                    Content="❐" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+            <Button Width="20" Height="20" Margin="5" Background="#368832"
+                    Content="−" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        </StackPanel> 
+
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Background="#192227">
+
+        </StackPanel>
+
+
+        <WrapPanel  ItemHeight="60" ItemWidth="120" Margin="10" Orientation="Horizontal" HorizontalAlignment="Center"
+                    Grid.ColumnSpan="3" Grid.RowSpan="3" Grid.Row="1" Grid.Column="1">
+            <Button Margin="5" Background="#db905d" Content="1"/>
+            <Button Margin="5" Background="#db905d" Content="2"/>
+            <Button Margin="5" Background="#db905d" Content="3"/>
+            <Button Margin="5" Background="#db905d" Content="4"/>
+            <Button Margin="5" Background="#db905d" Content="5"/>
+            <Button Margin="5" Background="#db905d" Content="6"/>
+            <Button Margin="5" Background="#db905d" Content="7"/>
+            <Button Margin="5" Background="#007abb" Content="+"/>
+        </WrapPanel>
     </Grid>
 </Window>

@@ -24,5 +24,16 @@ namespace Program_C
         {
             InitializeComponent();
         }
+
+        private void WindowsDragMove(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
